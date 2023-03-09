@@ -1,43 +1,33 @@
 import java.util.Scanner;
-
-// Chiamare la classe col proprio cognome
-public class MainClass
+public class Cognome 
 {
-	static Scanner in = new Scanner(System.in);
-	
-	public static void main(String[] args)
-	{
-		while(true)
-		{
-			stampaMenu();
-			int scelta = Integer.parseInt(in.nextLine());
-			switch(scelta)
-			{
-				//aggiungere, togliere casi a seconda delle proprie scelte
-				case 1:
-					//Inserire metodo statico
-				break;
-				case 2:
-					//Inserire metodo statico
-				break;
-				case 3:
-					//Inserire metodo statico
-				break;
-				default:
-					System.out.println("Scelta errata, riprova!");
-
-			}
-		}
-	}
-	static void stampaMenu()
-	{
-		// Modificare il menù secondo le proprie scelte
-		System.out.println("1 - Es n. * - Titolo es. *");
-		System.out.println("2 - Es n. * - Titolo es. *");
-		System.out.println("3 - Es n. * - Titolo es. *");
-		System.out.println("4 - Es n. * - Titolo es. *");
-		System.out.println("5 - Es n. * - Titolo es. *");
-	}
-	
-	// Aggiungere qui i metodi statici relativi agli esercizi scelti
+    public static void main(String[] args) 
+    {
+		Scanner in = new Scanner (System.in);
+        double[] array1 = new double[4];
+        double[] array2 = new double[array1.length/2];
+        
+        for (int i = 0; i < array1.length; i++)
+        {
+        	System.out.println("inserire un numero");
+    		array1[i]=in.nextDouble();
+        }
+        for (int i = 0; i < array2.length; i++) 
+        {
+            array2[i] = array1[2*i] * array1[2*i + 1];
+        }
+        
+        // Stampa i due array
+        System.out.println("Array 1: ");
+        for (double num : array1) 
+        {
+            System.out.print(num + " ");
+        }
+        
+        System.out.println("\nArray 2: ");
+        for (double num : array2) 
+        {
+            System.out.print(num + " ");
+        }
+    }
 }
